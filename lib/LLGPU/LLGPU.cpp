@@ -3,8 +3,15 @@
 
 //#define USE_FRAMEBUFFER_APPROACH
 
+#ifdef USE_FRAMEBUFFER_APPROACH
+// This shit can't run past 256x256!
 #define WIDTH 256
 #define HEIGHT 256
+#else
+// If you're running this mode, you have a *BEAST*. Just hope you don't need a framebuffer!
+#define WIDTH 1280
+#define HEIGHT 720
+#endif
 
 #ifdef USE_FRAMEBUFFER_APPROACH
 int framebuffer[WIDTH][HEIGHT][1];
