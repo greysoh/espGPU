@@ -16,8 +16,10 @@ void setup() {
   delay(5000);
 
   // Encoded OwO
-  for (int i = 0; i < 255; i++) {
-    LowGPU::putpixel(i, i, i, i, i);
+  for (int i = 0; i < LowGPU::get_width(); i++) {
+    if (i > LowGPU::get_height()) break;
+
+    LowGPU::putpixel(i, i, 0, 255, 0);
   }
   
   is_set_up = true;
