@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "LLGPU.h"
+#include "fabgl.h"
 
 bool is_set_up;
 
