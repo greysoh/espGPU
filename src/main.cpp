@@ -14,7 +14,7 @@ void setup() {
 
   Serial.flush();
   Serial.end(); 
-  Serial.begin(115200);
+  Serial.begin(921600);
   delay(5000);
 
   // Encoded OwO
