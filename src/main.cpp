@@ -5,14 +5,16 @@ bool is_set_up;
 
 void setup() {
   Serial.begin(115200);
-  Serial.print("device_tree: GPU@");
+  Serial.print("device_tree: GPU.");
+  Serial.print(921600);
+  Serial.print("@");
   Serial.print(LowGPU::get_width());
   Serial.print("x");
   Serial.println(LowGPU::get_height());
 
   Serial.flush();
   Serial.end(); 
-  Serial.begin(921600);
+  Serial.begin(115200);
   delay(5000);
 
   // Encoded OwO
